@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+svg {
+    height: 20px;
+}
+
+prof-img {
+    border-radius: 10px;
+}
