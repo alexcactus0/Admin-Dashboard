@@ -28,6 +28,7 @@ body {
 
 .header {
     display: grid;
+    padding: 10px;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 50px 100px;
 }
@@ -113,8 +114,8 @@ input {
 .card {
     padding: 30px;
     border: solid 1px black;
-    height: 150px;
-    width: 350px;
+    height: 140px;
+    width: 300px;
     border-radius: 10px;
 } 
 .card.calc { grid-column: 1; grid-row: 1; }
@@ -128,14 +129,24 @@ input {
 } .card.or { grid-column: 1; grid-row: 2; }
 
 .announcements {
-    grid-template-columns: 1 / 2;
-    border: 2px solid black;
-    height: 20em;
+    grid-column: 3;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 28em;
     width: 18em;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
+    padding: 15px;
     align-items: center;
-    
+    overflow: hidden;
+} 
+
+.maintenance, .community, .updated {
+    border-bottom: solid 2px rgba(210, 196, 196, 0.799);
+    padding: 10px;
 }
 
+.trending {
+    grid-row: 3;
+}
