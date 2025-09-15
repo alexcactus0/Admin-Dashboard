@@ -10,6 +10,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 svg {
     height: 20px;
 }
@@ -56,6 +57,9 @@ body {
 .btns {
     align-self: center;
     justify-self: center;
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: column;
 } button {
     font-family: 'Roboto';
     color: white;
@@ -74,9 +78,11 @@ input {
     width: 45em;
     border-radius: 15px;
     border: none;
-    background: rgba(212, 207, 207, 0.745);
+    background: rgba(234, 229, 229, 0.659);
     padding: 10px;
     height: 23px;
+} input:focus {
+    background-color: rgba(243, 239, 239, 0.779);
 }
 
 .srch {
@@ -101,6 +107,9 @@ input {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    width: 47em;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .main {
@@ -112,6 +121,7 @@ input {
 }
 
 .card {
+    
     padding: 30px;
     border: solid 1px black;
     height: 140px;
@@ -148,5 +158,16 @@ input {
 }
 
 .trending {
+    padding: 10px;
     grid-row: 3;
+    border: 1px black solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 18em;
 }
+.trending > * {
+    display: flex;
+    gap: 15px;
+} .trending svg { height: 40px; }
