@@ -18,7 +18,8 @@ svg {
 body {
     font-family: 'Roboto';
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1.3fr 5fr;
+    grid-template-rows: 150px 50px 1fr;
 }
 
 .header, .main {
@@ -28,22 +29,60 @@ body {
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 30px;
+    grid-template-rows: 50px 100px;
 }
 
 .profile {
+    padding: 10px;
     grid-column: 1;
+    display: flex;
+    gap: 20px;
+} .profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
-
 .prof-side {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btns {
+    align-self: center;
+    justify-self: center;
+} button {
+    font-family: 'Roboto';
+    color: white;
+    position: relative;
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(91, 161, 236);
+} button:active {
+    box-shadow: 0 2px 2px #0056b3;
+    transform: translateY(2px);
+}
+
+input {
+    width: 45em;
+    border-radius: 15px;
+    border: none;
+    background: rgba(212, 207, 207, 0.745);
+    padding: 10px;
+    height: 23px;
 }
 
 .srch {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-} .srch svg {  }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} .srch svg { height: 20px; }
 
 .sidebar {
     grid-column: 1;
@@ -56,4 +95,47 @@ body {
 .side-content, .dash-support { display: flex; flex-direction: column; gap: 15px; }
 .side-content > * { display: flex; gap: 5px; } .dash-support > * { display: flex; gap: 5px; }
 .dash-icn svg { height: 2.3rem; }
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 230px);
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    border: solid 1px black;
+    height: 150px;
+    width: 350px;
+    border-radius: 10px;
+} 
+.card.calc { grid-column: 1; grid-row: 1; }
+.card.es {
+    grid-column: 1;
+    grid-row: 3;
+} .card.rsp { grid-column: 2; grid-row: 3; }
+.card.sp {
+    grid-column: 2;
+    grid-row: 2;
+} .card.or { grid-column: 1; grid-row: 2; }
+
+.announcements {
+    grid-template-columns: 1 / 2;
+    border: 2px solid black;
+    height: 20em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    
+}
 
